@@ -11,11 +11,11 @@
 #include <gmp.h>
 int  main() {
     
-    double a = 520000;
-    double b = 100000;
-    printf("a / b = %.2f ", a / b);
-    printf("a + b = %.2f ", a + b);
-    printf("a - b = %.2f ", a - b);
-    printf("a * b = %.2f ", a * b);
+    double a = 12.14;
+    double b = 26.76;
+    printf("a / b = %.3f ", a / b);
+    printf("a + b = %.3f ", a + b);
+    printf("a - b = %.3f ", a - b);
+    printf("a * b = %.3f ", a * b);
     return 0;
 }
