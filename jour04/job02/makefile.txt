@@ -8,7 +8,7 @@ OBJS = $(patsubst %.c,%.o,$(SRCS))
 CFLAGS = -Wall -Wextra
 
 # Nom de l'exécutable
-EXEC = my_make_evolve
+EXEC = my_pointer_add
 
 .PHONY: all clean
 

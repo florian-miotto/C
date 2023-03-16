@@ -15,6 +15,7 @@ void dessiner_carre(int largeur, int hauteur) {
 
 int main() {
     int largeur, hauteur;
+    char c;
 
     printf("Entrez la largeur : ");
     scanf("%d", &largeur);
@@ -23,6 +24,15 @@ int main() {
     scanf("%d", &hauteur);
 
     dessiner_carre(largeur, hauteur);
+    printf("sortir de la fonction\n");
+    while (1) {
+        printf("Entrez q pour quitter: ");
+        scanf("%c", &c);
+        if (c == 'q' || c == 'Q') {
+            break;
+        }
+       
+    }
 
     return 0;
 }

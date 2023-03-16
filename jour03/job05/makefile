@@ -1,5 +1,5 @@
 # Fichiers sources
-SRCS = $(wildcard C/jour03/job03/*.c)
+SRCS = $(wildcard *.c)
 
 # Fichiers objets
 OBJS = $(patsubst %.c,%.o,$(SRCS))
