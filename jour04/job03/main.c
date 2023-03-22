@@ -3,32 +3,32 @@
 // nom de votre binaire : my_pointer_add
 
 #include <stdio.h>
+#include <string.h>
 
-int add_pointer_values(int *ptr1, int *ptr2) {
-    int sum = *ptr1 + *ptr2;
-    return sum;
-}
+int count_A(char *str) {
+    int count = 0;
+    char *ptr = str;
 
-#include <stdio.h>
+    while (*ptr != '\0') {
+        if (*ptr == 'A' || *ptr == 'a') {
+            count++;
+        }
+        ptr++;
+    }
 
-int add_binary_pointer_values(int *ptr1, int *ptr2) {
-    int binary_sum = *ptr1 | *ptr2;
-    return binary_sum;
+    return count;
 }
 
 int main() {
-    int num1, num2;
+    char input[256];
 
-    printf("Entrez la valeur de num1 : ");
-    scanf("%d", &num1);
+    printf("Entrez une chaîne de caractères : ");
+    fgets(input, sizeof(input), stdin);
 
-    printf("Entrez la valeur de num2 : ");
-    scanf("%d", &num2);
+    int count = count_A(input);
 
-    int binary_sum = add_binary_pointer_values(&num1, &num2);
+    printf("Le nombre d'occurrences de la lettre 'A' (majuscule et minuscule) dans la chaîne est : %d\n", count);
 
-    printf("La somme binaire de %d et %d est : %d\n", num1, num2, binary_sum);
-printf("La somme de %d et %d est : %d\n", num1, num2, add_pointer_values(&num1, &num2));
     return 0;
 }
 
